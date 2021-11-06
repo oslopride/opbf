@@ -7,11 +7,13 @@ import theme from "../utils/theme";
 import { sanity, urlFor } from "../utils/sanity";
 import logoWhite from "../assets/logo-white.svg";
 import styled from "@emotion/styled";
+import SanityPortableText from "../components/sanity-portable-text";
 
 type PageData = {
 	heroText: string;
 	heroDescription: string;
 	heroImage: { _type: string; asset: { _ref: string; _type: string } };
+	body: any;
 };
 
 const headerStyle = css`
@@ -71,6 +73,17 @@ const hero = css`
 	}
 `;
 
+const body = css`
+	margin: 5vh auto 3rem auto;
+	width: 90vw;
+	max-width: 1200px;
+`;
+
+const bodyText = css`
+	max-width: clamp(20rem, 60%, 40rem);
+	margin: 6rem auto;
+`;
+
 function App() {
 	const [pageData, setPageData] = useState<PageData>();
 
@@ -128,6 +141,11 @@ function App() {
 							</HeroButton>
 						</div>
 					</Hero>
+					<div css={body}>
+						{pageData.body && (
+							<SanityPortableText blocks={pageData.body} css={bodyText} />
+						)}
+					</div>
 				</>
 			)}
 		</div>
