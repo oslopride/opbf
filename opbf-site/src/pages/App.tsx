@@ -88,9 +88,15 @@ function App() {
 	const [pageData, setPageData] = useState<PageData>();
 
 	useEffect(() => {
-		sanity.fetch(`*[_type == "page"][0]`).then((res: PageData) => {
-			setPageData(res);
-		});
+		sanity
+			.fetch(`*[_type == "page"][0]`)
+			.then((res: PageData) => {
+				setPageData(res);
+				console.log("Response:", res);
+			})
+			.catch((err) => {
+				console.log("Error:", err);
+			});
 	}, []);
 
 	useEffect(() => {
