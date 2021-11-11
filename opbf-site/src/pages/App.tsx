@@ -107,6 +107,7 @@ function App() {
 
 	return (
 		<div>
+			<h1>Burde være noe her</h1>
 			{pageData && (
 				<>
 					<div css={headerStyle}>
