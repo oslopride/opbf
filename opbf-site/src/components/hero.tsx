@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import React from "react";
+import { useRef } from "react";
 import { css } from "@emotion/react";
 import BackgroundImage from "./background-image";
 import theme from "../utils/theme";
@@ -82,7 +82,7 @@ type Props = {
 const Hero: React.FC<Props> = (props) => {
 	const { imageUrl, color, className, children } = props;
 
-	const scrollButtonRef = React.useRef<HTMLButtonElement>(null);
+	const scrollButtonRef = useRef<HTMLButtonElement>(null);
 
 	function scrollToContent(): void {
 		const buttonDistanceFromTop = scrollButtonRef.current?.offsetTop as number;
