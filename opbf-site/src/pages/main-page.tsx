@@ -92,7 +92,7 @@ function MainPage() {
 
 	useEffect(() => {
 		sanity
-			.fetch(`*[_type == "page"][0]`)
+			.fetch(`*[_type == "mainpage"][0]`)
 			.then((res: PageData) => {
 				setPageData(res);
 				console.log("Response:", res);
