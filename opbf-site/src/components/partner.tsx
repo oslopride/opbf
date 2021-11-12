@@ -1,15 +1,22 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
+import theme from "../utils/theme";
 
 const Partner = () => {
 	return (
 		<div
 			css={css`
-				background-color: rgba(64, 20, 126, 0.1);
 				display: flex;
 				flex-direction: column;
-				padding: 80px 120px;
+
+				padding: min(10vw, 100px) 7vw min(10vw, 40px) 7vw;
+				margin-top: 135px;
+				background-color: ${theme.color.background.lightPurple};
+
+				h3 {
+					font-size: 2.34rem;
+				}
 			`}
 		>
 			<h2>Våre partnere</h2>
