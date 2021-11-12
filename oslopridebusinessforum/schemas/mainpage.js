@@ -4,7 +4,7 @@ export default {
   name: "mainpage",
   fields: [
     { title: "Hero banner image", name: "heroImage", type: "image" },
-    { title: "Hero banner text", name: "heroText", type: "string" },
+    { title: "Hero banner title", name: "heroText", type: "string" },
     {
       title: "Hero banner description",
       name: "heroDescription",
