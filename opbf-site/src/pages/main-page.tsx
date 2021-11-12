@@ -120,7 +120,9 @@ function MainPage() {
 					<Hero
 						css={hero}
 						imageUrl={
-							urlFor(pageData.heroImage).width(window.innerWidth).url() || ""
+							(pageData.heroImage &&
+								urlFor(pageData.heroImage).width(window.innerWidth).url()) ||
+							""
 						}
 						color={[theme.color.main.purple, theme.color.main.pink]}
 						centerContent
