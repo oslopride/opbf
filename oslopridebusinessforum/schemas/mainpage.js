@@ -1,7 +1,7 @@
 export default {
   title: "Index",
   type: "document",
-  name: "page",
+  name: "mainpage",
   fields: [
     { title: "Hero banner image", name: "heroImage", type: "image" },
     { title: "Hero banner text", name: "heroText", type: "string" },
