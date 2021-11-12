@@ -10,6 +10,7 @@ import styled from "@emotion/styled";
 import SanityPortableText from "../components/sanity-portable-text";
 import Footer from "../components/footer";
 import Partner from "../components/partner";
+import ProgramSection from "../components/program-section";
 
 type PageData = {
 	heroText: string;
@@ -86,7 +87,7 @@ const bodyText = css`
 	margin: 6rem auto;
 `;
 
-function App() {
+function MainPage() {
 	const [pageData, setPageData] = useState<PageData>();
 
 	useEffect(() => {
@@ -154,6 +155,7 @@ function App() {
 							<SanityPortableText blocks={pageData.body} css={bodyText} />
 						)}
 					</div>
+					<ProgramSection title={"Test"} subheading={"another test"} />
 					<Partner />
 					<Footer />
 				</>
@@ -162,7 +164,7 @@ function App() {
 	);
 }
 
-export default App;
+export default MainPage;
 
 const HeroButton = styled.button<{
 	textColor: string;
