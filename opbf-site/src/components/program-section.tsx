@@ -6,13 +6,14 @@ import styled from "@emotion/styled";
 import { urlFor } from "../utils/sanity";
 import BlockContentToReact from "@sanity/block-content-to-react";
 import theme from "../utils/theme";
+import Button from "./button";
 
 type Props = {
-	subheading: string;
-	title: string;
+	subheading?: string;
+	title?: string;
 	content?: any[];
-	links?: string[];
-	image?: string;
+	links?: { buttonText: string; buttonLink: string }[];
+	image?: { _type: string; asset: { _ref: string; _type: string } };
 };
 
 const advertisementStyle = css`
@@ -100,12 +101,14 @@ const ProgramSection: FC<Props> = (props) => {
 						links.map((link, index) => (
 							<li key={index}>
 								<Button
-									href={link}
+									href={link.buttonLink}
 									color={index === 0 ? "pink" : "blue"}
 									css={css`
 										width: 100%;
 									`}
-								/>
+								>
+									{link.buttonText}
+								</Button>
 							</li>
 						))}
 				</ul>
@@ -130,26 +133,4 @@ const SubHeading = styled.span`
 	font-size: 0.85rem;
 	letter-spacing: 2px;
 	font-weight: 600;
-`;
-
-const Button = styled.a<{ color: string }>`
-	background-color: ${(props) =>
-		props.color === "pink" ? theme.color.main.pink : theme.color.main.blue};
-	text-transform: uppercase;
-	text-align: center;
-	display: inline-block;
-	letter-spacing: 1px;
-	padding: 1rem 1.75rem;
-	text-decoration: none;
-	cursor: pointer;
-	border-radius: 4px;
-	color: ${(props) => (props.color === "pink" ? "#2b193c" : "#ffffff")};
-	font-weight: bold;
-	transition: color 0.3s, background 0.3s;
-
-	:hover,
-	:focus {
-		color: #ffffff;
-		background-color: ${theme.color.main.purple};
-	}
 `;

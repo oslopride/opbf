@@ -3,7 +3,7 @@
 import { css } from "@emotion/react";
 import theme from "../utils/theme";
 
-const Partner = () => {
+const Partners = () => {
 	return (
 		<div
 			css={css`
@@ -30,4 +30,4 @@ const Partner = () => {
 	);
 };
 
-export default Partner;
+export default Partners;

@@ -9,14 +9,22 @@ import logoWhite from "../assets/logo-white.svg";
 import styled from "@emotion/styled";
 import SanityPortableText from "../components/sanity-portable-text";
 import Footer from "../components/footer";
-import Partner from "../components/partner";
+import Partners from "../components/partners";
 import ProgramSection from "../components/program-section";
+import Button from "../components/button";
 
 type PageData = {
 	heroText: string;
 	heroDescription: string;
 	heroImage: { _type: string; asset: { _ref: string; _type: string } };
-	body: any;
+	heroButtons: { buttonText: string; buttonLink: string }[];
+
+	body: any[];
+	programTitle: string;
+	programSubheading: string;
+	programContent: any[];
+	programButtons: { buttonText: string; buttonLink: string }[];
+	programImage: { _type: string; asset: { _ref: string; _type: string } };
 };
 
 const headerStyle = css`
@@ -144,12 +152,40 @@ function MainPage() {
 								margin-top: 40px;
 							`}
 						>
-							<HeroButton backgroundColor={"#ff4fa4"} textColor={"black"}>
-								Hello
-							</HeroButton>
-							<HeroButton backgroundColor={"#40147E"} textColor={"white"}>
-								Hello
-							</HeroButton>
+							<ul
+								css={css`
+									list-style: none;
+									display: flex;
+									flex-direction: column;
+									margin: 1rem 0;
+									padding: 0;
+									@media (min-width: 600px) {
+										flex-direction: row;
+										li:not(:first-of-type) {
+											margin-left: 1rem;
+										}
+									}
+									li {
+										display: inherit;
+										margin-top: 1rem;
+									}
+								`}
+							>
+								{pageData.heroButtons &&
+									pageData.heroButtons.map((button, index) => (
+										<li key={index}>
+											<Button
+												href={button.buttonLink}
+												color={index === 0 ? "pink" : "blue"}
+												css={css`
+													width: 100%;
+												`}
+											>
+												{button.buttonText}
+											</Button>
+										</li>
+									))}
+							</ul>
 						</div>
 					</Hero>
 					<div css={body}>
@@ -157,8 +193,14 @@ function MainPage() {
 							<SanityPortableText blocks={pageData.body} css={bodyText} />
 						)}
 					</div>
-					<ProgramSection title={"Test"} subheading={"another test"} />
-					<Partner />
+					<ProgramSection
+						title={pageData.programTitle}
+						subheading={pageData.programSubheading}
+						image={pageData.programImage}
+						content={pageData.programContent}
+						links={pageData.programButtons}
+					/>
+					<Partners />
 					<Footer />
 				</>
 			)}
