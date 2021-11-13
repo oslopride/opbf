@@ -13,18 +13,26 @@ import Partners from "../components/partners";
 import ProgramSection from "../components/program-section";
 import Button from "../components/button";
 
+export type SanityImg = {
+	_type: string;
+	asset: { _ref: string; _type: string };
+};
+
 type PageData = {
 	heroText: string;
 	heroDescription: string;
-	heroImage: { _type: string; asset: { _ref: string; _type: string } };
+	heroImage: SanityImg;
 	heroButtons: { buttonText: string; buttonLink: string }[];
 
 	body: any[];
+
 	programTitle: string;
 	programSubheading: string;
 	programContent: any[];
 	programButtons: { buttonText: string; buttonLink: string }[];
-	programImage: { _type: string; asset: { _ref: string; _type: string } };
+	programImage: SanityImg;
+
+	partners: { logo: SanityImg[]; url: string }[];
 };
 
 const headerStyle = css`
@@ -200,7 +208,7 @@ function MainPage() {
 						content={pageData.programContent}
 						links={pageData.programButtons}
 					/>
-					<Partners />
+					<Partners partners={pageData.partners} />
 					<Footer />
 				</>
 			)}

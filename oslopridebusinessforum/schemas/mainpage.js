@@ -109,10 +109,18 @@ export default {
       fieldset: "program",
     },
     {
-      title: "Partner images",
-      name: "partnerImages",
+      title: "Partner logos",
+      name: "partners",
       type: "array",
-      of: [{ type: "image" }],
+      of: [
+        {
+          type: "object",
+          fields: [
+            { title: "Logo image", type: "image", name: "logo" },
+            { title: "Partner URL", type: "string", name: "url" },
+          ],
+        },
+      ],
     },
     {
       title: "Facebook link",
