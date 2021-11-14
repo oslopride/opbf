@@ -6,7 +6,6 @@ import Hero from "../components/hero";
 import theme from "../utils/theme";
 import { sanity, urlFor } from "../utils/sanity";
 import logoWhite from "../assets/logo-white.svg";
-import styled from "@emotion/styled";
 import SanityPortableText from "../components/sanity-portable-text";
 import Footer from "../components/footer";
 import Partners from "../components/partners";
