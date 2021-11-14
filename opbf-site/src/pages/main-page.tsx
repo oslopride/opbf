@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
 import { css } from "@emotion/react";
 import Hero from "../components/hero";
 import theme from "../utils/theme";
@@ -12,6 +12,7 @@ import Footer from "../components/footer";
 import Partners from "../components/partners";
 import ProgramSection from "../components/program-section";
 import Button from "../components/button";
+import { RouteComponentProps } from "@reach/router";
 
 export type SanityImg = {
 	_type: string;
@@ -103,7 +104,7 @@ const bodyText = css`
 	margin: 6rem auto;
 `;
 
-function MainPage() {
+const MainPage: FC<{ path: RouteComponentProps }> = () => {
 	const [pageData, setPageData] = useState<PageData>();
 
 	useEffect(() => {
