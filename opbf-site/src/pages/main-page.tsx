@@ -34,6 +34,10 @@ type PageData = {
 	programImage: SanityImg;
 
 	partners: { logo: SanityImg[]; url: string }[];
+
+	facebookLink: string;
+	linkedInlink: string;
+	instaLink: string;
 };
 
 const headerStyle = css`
@@ -210,12 +214,16 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 						links={pageData.programButtons}
 					/>
 					<Partners partners={pageData.partners} />
-					<Footer />
+					<Footer
+						fbLink={pageData.facebookLink}
+						instaLink={pageData.instaLink}
+						linkedInLink={pageData.linkedInlink}
+					/>
 				</>
 			)}
 		</div>
 	);
-}
+};
 
 export default MainPage;
 
