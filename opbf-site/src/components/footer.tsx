@@ -50,12 +50,23 @@ const Footer: React.FC<Props> = ({ fbLink, instaLink, linkedInLink }) => {
 						}
 					`}
 				>
-					<Address>
-						<h1>Hello</h1>
-					</Address>
-					<Shortcuts>
-						<h1>Bye</h1>
-					</Shortcuts>
+					<FooterSection>
+						<h3>Oslo Pride as</h3>
+						<p>c/o Foreningen FRI,</p>
+						<p>Mariboes gate 13, 0183 OSLO</p>
+						<p>
+							Org.nr:{" "}
+							<a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=986625860">
+								986 625 860
+							</a>
+						</p>
+					</FooterSection>
+					<FooterSection>
+						<h3>Snarveier</h3>
+						<a href={""}>Pridebutikken</a>
+						<a>Presse</a>
+						<a>Personvern</a>
+					</FooterSection>
 				</div>
 			</FooterWrapper>
 		</div>
@@ -75,6 +86,18 @@ const FooterWrapper = styled.div`
 
 	@media screen and (max-width: 720px) {
 		flex-direction: column;
+	}
+	a {
+		color: ${theme.color.background.pink};
+		&:hover,
+		&:focus {
+			color: ${theme.color.background.lightYellow};
+		}
+	}
+
+	a,
+	p {
+		margin: 0.25rem 0;
 	}
 `;
 
@@ -96,5 +119,8 @@ const Logos = styled.div`
 	flex-direction: column;
 `;
 
-const Address = styled.div``;
-const Shortcuts = styled.div``;
+const FooterSection = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-right: 2rem;
+`;
