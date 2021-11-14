@@ -21,7 +21,7 @@ type Props = {
 	className?: string;
 };
 
-const SanityProtableText: React.FC<Props> = (props) => {
+const SanityPortableText: React.FC<Props> = (props) => {
 	return (
 		<div className={props.className} css={wrapper}>
 			<BlockContentToReact
@@ -34,4 +34,4 @@ const SanityProtableText: React.FC<Props> = (props) => {
 	);
 };
 
-export default SanityProtableText;
+export default SanityPortableText;
