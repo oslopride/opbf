@@ -68,6 +68,9 @@ const Footer: React.FC<Props> = ({
 								986 625 860
 							</a>
 						</p>
+						<p>
+							Tlf: <a href="tel:+4701544090"> +47 915 44 090</a>
+						</p>
 					</FooterSection>
 					<FooterSection>
 						<h3>Snarvei</h3>
