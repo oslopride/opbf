@@ -155,6 +155,9 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 					<Footer
 						fbLink={pageData.facebookLink}
 						instaLink={pageData.instaLink}
+						prideshopLink={pageData.prideshopLink}
+						pressLink={pageData.pressLink}
+						privacyLink={pageData.privacyLink}
 					/>
 				</>
 			)}

@@ -10,10 +10,18 @@ import styled from "@emotion/styled";
 type Props = {
 	fbLink?: string;
 	instaLink?: string;
-	linkedInLink?: string;
+	prideshopLink?: string;
+	pressLink?: string;
+	privacyLink?: string;
 };
 
-const Footer: React.FC<Props> = ({ fbLink, instaLink, linkedInLink }) => {
+const Footer: React.FC<Props> = ({
+	fbLink,
+	instaLink,
+	prideshopLink,
+	pressLink,
+	privacyLink,
+}) => {
 	return (
 		<div
 			css={css`
@@ -62,10 +70,10 @@ const Footer: React.FC<Props> = ({ fbLink, instaLink, linkedInLink }) => {
 						</p>
 					</FooterSection>
 					<FooterSection>
-						<h3>Snarveier</h3>
-						<a href={""}>Pridebutikken</a>
-						<a>Presse</a>
-						<a>Personvern</a>
+						<h3>Snarvei</h3>
+						<a href={prideshopLink}>Pridebutikken</a>
+						<a href={pressLink}>Presse</a>
+						<a href={privacyLink}>Personvern</a>
 					</FooterSection>
 				</div>
 			</FooterWrapper>
