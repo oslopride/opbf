@@ -118,7 +118,7 @@ export default {
           type: "object",
           fields: [
             { title: "Logo image", type: "image", name: "logo" },
-            { title: "Partner URL", type: "string", name: "url" },
+            { title: "Partner URL", type: "url", name: "url" },
           ],
         },
       ],
@@ -126,13 +126,31 @@ export default {
     {
       title: "Facebook link",
       name: "facebookLink",
-      type: "string",
+      type: "url",
       fieldset: "footer",
     },
     {
       title: "Instagram link",
       name: "instaLink",
-      type: "string",
+      type: "url",
+      fieldset: "footer",
+    },
+    {
+      title: "Pride shop link",
+      name: "prideshopLink",
+      type: "url",
+      fieldset: "footer",
+    },
+    {
+      title: "Press link",
+      name: "pressLink",
+      type: "url",
+      fieldset: "footer",
+    },
+    {
+      title: "Privacy link",
+      name: "privacyLink",
+      type: "url",
       fieldset: "footer",
     },
   ],
