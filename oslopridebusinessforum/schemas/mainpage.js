@@ -2,6 +2,7 @@ export default {
   title: "Main page",
   type: "document",
   name: "mainpage",
+  __experimental_actions: ["update", "publish"],
   fieldsets: [
     {
       name: "hero",
