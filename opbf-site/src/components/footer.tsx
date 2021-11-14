@@ -82,6 +82,7 @@ const OsloPrideLogo = styled.img`
 	width: 10rem;
 	fill: ${theme.color.text.white};
 	margin-left: -1rem;
+	margin-bottom: 1rem;
 `;
 
 const SocialLogo = styled.img`
