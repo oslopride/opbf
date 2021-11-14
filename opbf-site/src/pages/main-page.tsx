@@ -13,6 +13,7 @@ import Partners from "../components/partners";
 import ProgramSection from "../components/program-section";
 import Button from "../components/button";
 import { RouteComponentProps } from "@reach/router";
+import Header from "../components/header";
 
 export type SanityImg = {
 	_type: string;
@@ -37,52 +38,10 @@ type PageData = {
 
 	facebookLink: string;
 	instaLink: string;
+	prideshopLink: string;
+	pressLink: string;
+	privacyLink: string;
 };
-
-const headerStyle = css`
-	display: block;
-	height: 6rem;
-	width: 100%;
-	margin: 0 auto;
-	position: absolute;
-	top: 0.85rem;
-	left: 0;
-	z-index: 10;
-	background-color: transparent;
-
-	h1 {
-		position: absolute;
-		top: 0.5rem;
-		left: 2rem;
-		margin: 0;
-		background-image: url(${logoWhite});
-		background-size: 160px auto;
-		background-repeat: no-repeat;
-
-		width: 160px;
-		height: 80px;
-
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
-
-		@media screen and (max-width: 850px) {
-			left: 1vw;
-		}
-	}
-`;
-
-const hidden = css`
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
-`;
 
 const body = css`
 	margin: 5vh auto 3rem auto;
@@ -117,13 +76,7 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 		<div>
 			{pageData && (
 				<>
-					<div css={headerStyle}>
-						<h1>
-							<a href="/">
-								<span css={hidden}>Oslo Pride</span>
-							</a>
-						</h1>
-					</div>
+					<Header />
 					<Hero
 						imageUrl={
 							(pageData.heroImage &&
