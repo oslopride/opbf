@@ -1,5 +1,5 @@
 export default {
-  title: "Index",
+  title: "Main page",
   type: "document",
   name: "mainpage",
   fieldsets: [
@@ -125,12 +125,6 @@ export default {
     {
       title: "Facebook link",
       name: "facebookLink",
-      type: "string",
-      fieldset: "footer",
-    },
-    {
-      title: "Twitter link",
-      name: "twitterLink",
       type: "string",
       fieldset: "footer",
     },
