@@ -84,18 +84,6 @@ const hidden = css`
 	white-space: nowrap;
 `;
 
-const hero = css`
-	text-align: center;
-
-	h2 {
-		margin: 0 0 1rem 0;
-	}
-
-	p {
-		margin: 0;
-	}
-`;
-
 const body = css`
 	margin: 5vh auto 3rem auto;
 	width: 90vw;
@@ -115,7 +103,6 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 			.fetch(`*[_type == "mainpage"][0]`)
 			.then((res: PageData) => {
 				setPageData(res);
-				console.log("Response:", res);
 			})
 			.catch((err) => {
 				console.log("Error:", err);
@@ -138,7 +125,6 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 						</h1>
 					</div>
 					<Hero
-						css={hero}
 						imageUrl={
 							(pageData.heroImage &&
 								urlFor(pageData.heroImage).width(window.innerWidth).url()) ||
