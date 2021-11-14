@@ -36,7 +36,6 @@ type PageData = {
 	partners: { logo: SanityImg[]; url: string }[];
 
 	facebookLink: string;
-	linkedInlink: string;
 	instaLink: string;
 };
 
@@ -217,7 +216,6 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 					<Footer
 						fbLink={pageData.facebookLink}
 						instaLink={pageData.instaLink}
-						linkedInLink={pageData.linkedInlink}
 					/>
 				</>
 			)}
