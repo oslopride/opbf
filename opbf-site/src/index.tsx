@@ -1,12 +1,18 @@
 import React from "react";
+import { Router } from "@reach/router";
+
 import ReactDOM from "react-dom";
 import "./index.css";
 import MainPage from "./pages/main-page";
+import Program from "./pages/program";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<MainPage />
+		<Router>
+			<MainPage path="/" />
+			<Program path="/program" />
+		</Router>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
