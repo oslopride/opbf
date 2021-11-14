@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import theme from "../utils/theme";
 
-const Button = styled.a<{ color: string }>`
+const Button = styled.a<{ color: string; rounded?: boolean }>`
 	background-color: ${(props) =>
 		props.color === "pink" ? theme.color.main.pink : theme.color.main.blue};
 	text-transform: uppercase;
@@ -11,7 +11,7 @@ const Button = styled.a<{ color: string }>`
 	padding: 1rem 1.75rem;
 	text-decoration: none;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 50px;
 	color: ${(props) => (props.color === "pink" ? "#2b193c" : "#ffffff")};
 	font-weight: bold;
 	transition: color 0.3s, background 0.3s;
