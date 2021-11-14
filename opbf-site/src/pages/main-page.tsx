@@ -210,18 +210,3 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 };
 
 export default MainPage;
-
-const HeroButton = styled.button<{
-	textColor: string;
-	backgroundColor: string;
-}>`
-	width: 198px;
-	height: 50px;
-	border: none;
-	margin-bottom: 16px;
-	text-transform: uppercase;
-	color: ${(props) => props.textColor};
-	background: ${(props) => props.backgroundColor};
-	border-radius: 50px;
-	padding: 16px 48px;
-`;
