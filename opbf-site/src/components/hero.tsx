@@ -12,7 +12,15 @@ const hero = css`
 	color: #ffffff;
 	overflow-wrap: break-word;
 
+	text-align: center;
+
+	p {
+		margin: 0;
+	}
+
 	h2 {
+		margin: 0 0 1rem 0;
+
 		font-size: clamp(2rem, 0.668rem + 7.4vw, 4rem);
 	}
 
