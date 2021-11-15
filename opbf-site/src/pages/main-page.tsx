@@ -44,11 +44,10 @@ type PageData = {
 const body = css`
 	margin: 5vh auto 3rem auto;
 	width: 90vw;
-	max-width: 1200px;
+	max-width: 800px;
 `;
 
 const bodyText = css`
-	max-width: clamp(20rem, 60%, 40rem);
 	margin: 6rem auto;
 `;
 
@@ -89,6 +88,11 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 							css={css`
 								color: #ffadb5;
 								text-transform: uppercase;
+								font-size: 24px;
+								font-weight: 700;
+								@media screen and (max-width: 480px) {
+									font-size: 18px;
+								}
 							`}
 						>
 							{pageData.heroDescription}
