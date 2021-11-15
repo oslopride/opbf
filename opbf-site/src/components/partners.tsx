@@ -45,9 +45,9 @@ const Partners: FC<Props> = ({ partners }) => {
 				`}
 			>
 				{partners &&
-					partners.map((partner) => {
+					partners.map((partner, index) => {
 						return (
-							<a href={partner.url}>
+							<a key={`partner${index}`} href={partner.url}>
 								<Logo src={urlFor(partner.logo).width(200).url() || ""} />
 							</a>
 						);
