@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { css } from "@emotion/react";
 import BackgroundImage from "./background-image";
 import theme from "../utils/theme";
+import ArrowDown from "../assets/arrow-down.svg";
 
 const hero = css`
 	position: relative;
@@ -117,9 +118,7 @@ const Hero: React.FC<Props> = (props) => {
 					css={scrollButton}
 					onClick={scrollToContent}
 				>
-					<span role="img" aria-label="Nedoverpil">
-						↓
-					</span>
+					<img src={ArrowDown} />
 				</button>
 			)}
 		</div>
