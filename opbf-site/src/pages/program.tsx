@@ -50,7 +50,6 @@ const Program: FC<{ path: RouteComponentProps }> = () => {
 			.fetch(`*[_type == "program"][0]`)
 			.then((res: PageData) => {
 				setPageData(res);
-				console.log("Response:", res);
 			})
 			.catch((err) => {
 				console.log("Error:", err);
