@@ -75,6 +75,12 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 				<>
 					<Header />
 					<Hero
+						css={css`
+							min-height: calc(100vh - 20rem);
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						`}
 						imageUrl={
 							(pageData.heroImage &&
 								urlFor(pageData.heroImage).width(window.innerWidth).url()) ||
