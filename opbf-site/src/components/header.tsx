@@ -24,7 +24,7 @@ const headerStyle = css`
 		background-repeat: no-repeat;
 
 		width: 160px;
-		height: 80px;
+		height: 90px;
 
 		a {
 			display: block;
@@ -53,7 +53,7 @@ const Header = () => {
 		<div css={headerStyle}>
 			<h1>
 				<a href="/">
-					<span css={hidden}>Oslo Pride</span>
+					<span css={hidden}>Oslo Pride Business Forum</span>
 				</a>
 			</h1>
 		</div>
