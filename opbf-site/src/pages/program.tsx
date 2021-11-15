@@ -27,7 +27,7 @@ const body = css`
 	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 8rem;
+	margin-top: 4rem;
 	margin-bottom: 6rem;
 	overflow-wrap: break-word;
 
@@ -35,6 +35,10 @@ const body = css`
 	blockquote,
 	ul {
 		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 480px) {
+		margin-top: 3rem;
 	}
 `;
 
