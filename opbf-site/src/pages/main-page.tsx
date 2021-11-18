@@ -45,6 +45,12 @@ const body = css`
 	margin: 5vh auto 3rem auto;
 	width: 90vw;
 	max-width: 800px;
+	p,
+	blockquote,
+	ul {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
 `;
 
 const bodyText = css`
@@ -94,10 +100,10 @@ const MainPage: FC<{ path: RouteComponentProps }> = () => {
 							css={css`
 								color: #ffadb5;
 								text-transform: uppercase;
-								font-size: 24px;
+								font-size: 1.5rem;
 								font-weight: 700;
 								@media screen and (max-width: 480px) {
-									font-size: 18px;
+									font-size: 1.125rem;
 								}
 							`}
 						>
