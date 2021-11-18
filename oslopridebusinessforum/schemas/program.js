@@ -51,7 +51,13 @@ export default {
       title: "Program content",
       name: "programContent",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: { hotspot: true },
+        },
+      ],
     },
   ],
 };
