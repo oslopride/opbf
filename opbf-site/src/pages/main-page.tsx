@@ -48,8 +48,11 @@ const body = css`
 	p,
 	blockquote,
 	ul {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		line-height: 2rem;
+		@media screen and (max-width: 480px) {
+			font-size: 1rem;
+		}
 	}
 `;
 
