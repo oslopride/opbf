@@ -69,7 +69,13 @@ const Footer: React.FC<Props> = ({
 							</a>
 						</p>
 						<p>
-							Tlf: <a href="tel:+4701544090"> +47 915 44 090</a>
+							Tlf: <a href="tel:+4745853767"> +47 458 53 767</a>
+						</p>
+						<p>
+							E-post:{" "}
+							<a href="mailto:konferanse@oslopride.no">
+								konferanse@oslopride.no
+							</a>
 						</p>
 					</FooterSection>
 					<FooterSection>
