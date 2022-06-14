@@ -8,14 +8,14 @@ import Hero from "../components/hero";
 import theme from "../utils/theme";
 import SanityPortableText from "../components/sanity-portable-text";
 import { sanity, urlFor } from "../utils/sanity";
-import { SanityImg } from "./main-page";
 import Button from "../components/button";
 import Header from "../components/header";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 type PageData = {
 	heroText: string;
 	heroDescription: string;
-	heroImage: SanityImg;
+	heroImage: SanityImageSource;
 	heroButtons: { buttonText: string; buttonLink: string }[];
 
 	programContent: any[];

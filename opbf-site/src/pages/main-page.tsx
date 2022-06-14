@@ -12,16 +12,12 @@ import ProgramSection from "../components/program-section";
 import Button from "../components/button";
 import { RouteComponentProps } from "@reach/router";
 import Header from "../components/header";
-
-export type SanityImg = {
-	_type: string;
-	asset: { _ref: string; _type: string };
-};
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 type PageData = {
 	heroText: string;
 	heroDescription: string;
-	heroImage: SanityImg;
+	heroImage: SanityImageSource;
 	heroButtons: { buttonText: string; buttonLink: string }[];
 
 	body: any[];
@@ -30,9 +26,9 @@ type PageData = {
 	programSubheading: string;
 	programContent: any[];
 	programButtons: { buttonText: string; buttonLink: string }[];
-	programImage: SanityImg;
+	programImage: SanityImageSource;
 
-	partners: { logo: SanityImg[]; url: string }[];
+	partners: { logo: SanityImageSource[]; url: string }[];
 
 	facebookLink: string;
 	instaLink: string;

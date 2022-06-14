@@ -4,11 +4,11 @@ import { FC } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import theme from "../utils/theme";
-import { SanityImg } from "../pages/main-page";
 import { urlFor } from "../utils/sanity";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 type Props = {
-	partners?: { logo: SanityImg[]; url: string }[];
+	partners?: { logo: SanityImageSource[]; url: string }[];
 };
 
 const Partners: FC<Props> = ({ partners }) => {

@@ -7,13 +7,14 @@ import { urlFor } from "../utils/sanity";
 import BlockContentToReact from "@sanity/block-content-to-react";
 import theme from "../utils/theme";
 import Button from "./button";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 type Props = {
 	subheading?: string;
 	title?: string;
 	content?: any[];
 	links?: { buttonText: string; buttonLink: string }[];
-	image?: { _type: string; asset: { _ref: string; _type: string } };
+	image?: SanityImageSource;
 };
 
 const advertisementStyle = css`
