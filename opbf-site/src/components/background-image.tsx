@@ -27,10 +27,10 @@ const getGradient = (colorList: Array<string>) => {
 const BackgroundImage = styled.figure<Props>`
 	position: relative;
 	margin: 0;
-	background-image: url("${(props) => props.imageUrl}");
+	${(props) =>
+		props.imageUrl !== "" && `background-image: url(${props.imageUrl})`};
 	background-size: cover;
 	background-position: center;
-
 	::after {
 		content: "";
 		position: absolute;
