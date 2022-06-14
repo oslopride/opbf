@@ -6,12 +6,14 @@ import "./index.css";
 import MainPage from "./pages/main-page";
 import Program from "./pages/program";
 import reportWebVitals from "./reportWebVitals";
+import Team from "./pages/team";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
 			<MainPage path="/" />
 			<Program path="/program" />
+			<Team path="/team" />
 		</Router>
 	</React.StrictMode>,
 	document.getElementById("root")
