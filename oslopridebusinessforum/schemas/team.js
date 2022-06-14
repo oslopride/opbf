@@ -14,7 +14,12 @@ export default {
           title: "Team member name",
           type: "object",
           fields: [
-            { title: "Member image", name: "image", type: "image" },
+            {
+              title: "Member image",
+              name: "image",
+              type: "image",
+              validation: (Rule) => Rule.required(),
+            },
             {
               title: "Name",
               name: "fullName",
