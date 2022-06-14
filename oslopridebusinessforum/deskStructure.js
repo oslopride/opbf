@@ -22,4 +22,8 @@ export default () =>
             .schemaType("program")
             .documentId("4d65fd6b-e99f-481c-b6c0-5509d546d774")
         ),
+
+      S.listItem()
+        .title("Team page")
+        .child(S.editor().title("Team page").id("teamPage").schemaType("team")),
     ]);
