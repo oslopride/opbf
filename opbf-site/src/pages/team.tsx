@@ -25,7 +25,7 @@ type PageData = {
 const body = css`
 	display: block;
 	width: 90vw;
-	max-width: 900px;
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 4rem;
@@ -45,10 +45,16 @@ const body = css`
 
 const teamList = css`
 	display: grid;
-	column-gap: 8rem;
+	column-gap: 1rem;
 	row-gap: 4rem;
+	justify-items: center;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	@media (max-width: 480px) {
+
+	@media (max-width: 1200px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@media (max-width: 800px) {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 `;
@@ -58,8 +64,12 @@ const memberStyle = css`
 		color: ${theme.color.text.grey};
 		&:hover,
 		&:focus {
-			color: ${theme.color.background.lightYellow};
+			color: #3b1c7b;
 		}
+	}
+
+	img {
+		max-height: 400px;
 	}
 `;
 
@@ -92,13 +102,13 @@ const Team: FC<{ path: RouteComponentProps }> = () => {
 					</Hero>
 					<div css={body}>
 						<div css={teamList}>
-							{pageData.teamMembers.map((member) => {
+							{pageData.teamMembers.map((member, index) => {
 								return (
-									<div css={memberStyle}>
+									<div key={`member-${index}`} css={memberStyle}>
 										<img
 											src={
 												member.image
-													? urlFor(member.image).width(200).url()
+													? urlFor(member.image).height(400).width(320).url()
 													: ""
 											}
 										/>
